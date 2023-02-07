@@ -3,6 +3,9 @@
     margin-right: 10.6%;
     width: 22px;
     height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: opacity 0.4s ease;
     border: 0;
     background-color: unset;
