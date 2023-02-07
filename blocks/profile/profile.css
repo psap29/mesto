@@ -1,12 +1,26 @@
 .profile {
     padding-top: 36.25px;
+    box-sizing: content-box;
     width: 73%;
     margin: 0 auto;
     display: flex;
 }
 
+@media screen and (max-width: 780px) {
+    .profile {
+        width: 73%;
+        position: relative;
+        padding-top: 42px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .profile {
+        width: 88%;
+        position: relative;
+        padding-top: 42px;
         flex-direction: column;
         justify-content: center;
     }
