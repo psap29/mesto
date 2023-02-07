@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="pages/index.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="page">
+            <header class="header">
+                <img class="header__logo" src="images/logo.svg" alt="Лого">
+            </header>
+            <main>
+                <section class="profile">
+                    <img class="profile__avatar" src="images/avatar.jpg" alt="Аватар">
+                    <div class="profile__info">
+                        <h1 class="profile__name">Жак-Ив Куско</h1>
+                        <p class="profile__description">Исследователь океана</p>
+                    </div>
+                    <button class="profile__edit-button"><img class="profile__edit-button-pic" src="images/edit_button.svg" alt="Кнопка редактирования информации в профиле"></button>
+                    <button class="profile__add-button"><img class="profile__add-button-pic" src="images/add_button.svg" alt="Кнопка добавления фотографий в профиль"></button>
+                </section>
+                <section class="elements">
+                    <div class="elements__element">
+                        <img class="elements__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Картинка к карточке">
+                        <div class="elements__info">
+                            <h2 class="elements__title">Карачаевск</h2>
+                            <img class="elements__like-button" src="images/like__button.svg" alt="Кнопка лайка">
+                        </div>
+                    </div>
+                    <div class="elements__element">
+                        <img class="elements__image" src="images/kirill-pershin-1404681-unsplash.jpg" alt="Картинка к карточке">
+                        <div class="elements__info">
+                            <h2 class="elements__title">Гора Эльбрус</h2>
+                            <img class="elements__like-button" src="images/like__button.svg" alt="Кнопка лайка">
+                        </div>
+                    </div>
+                    <div class="elements__element">
+                        <img class="elements__image" src="images/kirill-pershin-1556355-unsplash.jpg" alt="Картинка к карточке">
+                        <div class="elements__info">
+                            <h2 class="elements__title">Домбай</h2>
+                            <img class="elements__like-button" src="images/like__button.svg" alt="Кнопка лайка">
+                        </div>
+                    </div>
+                    <div class="elements__element">
+                        <img class="elements__image" src="images/kirill-pershin-1404681-unsplash.jpg" alt="Картинка к карточке">
+                        <div class="elements__info">
+                            <h2 class="elements__title">Гора Эльбрус</h2>
+                            <img class="elements__like-button" src="images/like__button.svg" alt="Кнопка лайка">
+                        </div>
+                    </div>
+                    <div class="elements__element">
+                        <img class="elements__image" src="images/kirill-pershin-1556355-unsplash.jpg" alt="Картинка к карточке">
+                        <div class="elements__info">
+                            <h2 class="elements__title">Домбай</h2>
+                            <img class="elements__like-button" src="images/like__button.svg" alt="Кнопка лайка">
+                        </div>
+                    </div>
+                    <div class="elements__element">
+                        <img class="elements__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Картинка к карточке">
+                        <div class="elements__info">
+                            <h2 class="elements__title">Карачаевск</h2>
+                            <img class="elements__like-button" src="images/like__button.svg" alt="Кнопка лайка">
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <p class="footer__copyright">© 2020 Mesto Russia</p>
+            </footer>
+        </div>
+    </div>
+    <div class="popup">
+        <form class="popup__container" method="get">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <input class="popup__input" type="text">
+            <input class="popup__input" type="text">
+            <button class="popup__save-button">Сохранить</button>
+            <button class="popup__close-button"><img class="popup__close-icon" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
