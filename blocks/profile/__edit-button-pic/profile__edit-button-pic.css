@@ -1,14 +1,10 @@
-@media screen and (max-width: 780px) {
-    .profile__edit-button-pic {
-        display: block;
-        width: 7.5px;
-        height: 7.5px;
-    }
+.profile__edit-button-pic {
+    width: 10px;
+    height: 10px;
 }
 
 @media screen and (max-width: 320px) {
     .profile__edit-button-pic {
-        display: block;
         width: 7.5px;
         height: 7.5px;
     }

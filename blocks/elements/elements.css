@@ -1,12 +1,12 @@
 .elements {
-    width: 73%;
+    width: 68%;
     margin: 0 auto;
     margin-top: 47.25px;
     padding-bottom: 67px;
     box-sizing: border-box;
     display: grid;
     gap: 17px;
-    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 }
 
 @media screen and (max-width: 450px) {

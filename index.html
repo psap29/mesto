@@ -14,15 +14,17 @@
                 <img class="header__logo" src="images/logo.svg" alt="Лого">
             </header>
             <main>
-                <section class="profile">
+                <nav class="profile">
                     <img class="profile__avatar" src="images/avatar.jpg" alt="Аватар">
-                    <div class="profile__info">
-                        <h1 class="profile__name">Жак-Ив Куско</h1>
-                        <p class="profile__description">Исследователь океана</p>
+                    <div class="profile__main">
+                        <div class="profile__info">
+                            <h1 class="profile__name">Жак-Ив Куско</h1>
+                            <p class="profile__description">Исследователь океана</p>
+                        </div>
+                        <button class="profile__edit-button"><img class="profile__edit-button-pic" src="images/edit_button.svg" alt="Кнопка редактирования информации в профиле"></button>
                     </div>
-                    <button class="profile__edit-button"><img class="profile__edit-button-pic" src="images/edit_button.svg" alt="Кнопка редактирования информации в профиле"></button>
                     <button class="profile__add-button"><img class="profile__add-button-pic" src="images/add_button.svg" alt="Кнопка добавления фотографий в профиль"></button>
-                </section>
+                </nav>
                 <section class="elements">
                     <div class="elements__element">
                         <img class="elements__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Картинка к карточке">
@@ -76,10 +78,10 @@
     <div class="popup">
         <form class="popup__container" method="get">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input class="popup__input" type="text">
-            <input class="popup__input" type="text">
+            <input class="popup__input" type="text" minlength="2" maxlength="20" placeholder="Имя">
+            <input class="popup__input" type="text" minlength="2" maxlength="40" placeholder="Род деятельности">
             <button class="popup__save-button">Сохранить</button>
-            <button class="popup__close-button"><img class="popup__close-button-pic" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
+            <button class="popup__close-button" type="button"><img class="popup__close-button-pic" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
         </form>
     </div>
     <script src="script.js"></script>
