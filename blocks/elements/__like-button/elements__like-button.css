@@ -12,6 +12,7 @@
     cursor: pointer;
     background-image: url(../../../images/like__button.svg);
     background-size: 22px 19px;
+    background-repeat: no-repeat;
 }
 
 .elements__like-button:hover {
