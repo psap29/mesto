@@ -5,7 +5,7 @@ const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const saveButton = document.querySelector('.popup__save-button');
 const inputFields = document.querySelectorAll('.popup__input');
-const form = document.querySelector('.popup__container');
+const formSent = document.querySelector('.popup__container');
 
 function openPopup() {
     popup.classList.add('popup_opened');
@@ -28,4 +28,4 @@ editButton.addEventListener('click', openPopup);
 
 closeButton.addEventListener('click', closePopup); 
 
-form.addEventListener('submit', sendForm);
+formSent.addEventListener('submit', sendForm);
