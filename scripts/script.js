@@ -4,13 +4,14 @@ const popup = document.querySelector('.popup');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const saveButton = document.querySelector('.popup__save-button');
-const inputFields = document.querySelectorAll('.popup__input');
+const inputFieldName = document.querySelector('#popup__input_line_name');
+const inputFieldOccupation = document.querySelector('#popup__input_line_occupation');
 const formSent = document.querySelector('.popup__container');
 
 function openPopup() {
     popup.classList.add('popup_opened');
-    inputFields[0].value = profileName.textContent;
-    inputFields[1].value = profileDescription.textContent;
+    inputFieldName.value = profileName.textContent;
+    inputFieldOccupation.value = profileDescription.textContent;
 }
 
 function closePopup() {
@@ -19,8 +20,8 @@ function closePopup() {
 
 function sendForm (evt) {
     evt.preventDefault();
-    profileName.textContent = inputFields[0].value;
-    profileDescription.textContent = inputFields[1].value;
+    profileName.textContent = inputFieldName.value;
+    profileDescription.textContent = inputFieldOccupation.value;
     popup.classList.remove('popup_opened');
 }
 

@@ -15,11 +15,10 @@
     opacity: 0.6;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 850px) {
     .popup__close-button {
         width: 20px;
         height: 20px;
-        top: -40px;
         right: 0;
     }
 }
@@ -28,7 +27,6 @@
     .popup__close-button {
         width: 20px;
         height: 20px;
-        top: -40px;
         right: 0;
     }
 }

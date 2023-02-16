@@ -2,9 +2,10 @@
     margin: 0 auto;
     margin-top: 48px;
     margin-bottom: 37px;
+    margin-left: 36px;
     width: 83%;
     min-height: 50px;
-    background-color: #000000;
+    background-color: hsl(0, 0%, 0%);
     font-size: 18px;
     line-height: 21.78px;
     font-weight: 400;
@@ -19,13 +20,11 @@
     opacity: 0.8;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 850px) {
     .popup__title {
         width: 84%;
         margin-top: 25px;
         margin-left: 22px;
-        font-size: 18px;
-        line-height: 21.78px;
     }
 }
 

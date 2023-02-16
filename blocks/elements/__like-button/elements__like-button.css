@@ -3,9 +3,6 @@
     margin-right: 5.5%;
     width: 22px;
     height: 19px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: opacity 0.4s ease;
     border: 0;
     background-color: unset;
@@ -17,4 +14,10 @@
 
 .elements__like-button:hover {
     opacity: 0.5;
+}
+
+@media screen and (max-width: 320px) {
+    .elements__like-button {
+        margin-right: 6.7%;
+    }
 }

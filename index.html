@@ -14,58 +14,58 @@
                 <img class="header__logo" src="images/logo.svg" alt="Лого">
             </header>
             <main>
-                <nav class="profile">
+                <section class="profile">
                     <img class="profile__avatar" src="images/avatar.jpg" alt="Аватар">
                     <div class="profile__main">
                         <div class="profile__info">
                             <h1 class="profile__name">Жак-Ив Кусто</h1>
                             <p class="profile__description">Исследователь океана</p>
                         </div>
-                        <button class="profile__edit-button"><img class="profile__edit-button-pic" src="images/edit_button.svg" alt="Кнопка редактирования информации в профиле"></button>
+                        <button class="profile__edit-button"><img class="profile__edit-button-pic" src="images/edit_button.svg" alt="Кнопка редактирования информации в профиле" type="button"></button>
                     </div>
-                    <button class="profile__add-button"><img class="profile__add-button-pic" src="images/add_button.svg" alt="Кнопка добавления фотографий в профиль"></button>
-                </nav>
+                    <button class="profile__add-button"><img class="profile__add-button-pic" src="images/add_button.svg" alt="Кнопка добавления фотографий в профиль" type="button"></button>
+                </section>
                 <section class="elements">
                     <div class="elements__element">
                         <img class="elements__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Картинка к карточке">
                         <div class="elements__info">
                             <h2 class="elements__title">Карачаевск</h2>
-                            <button class="elements__like-button"></button>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </div>
                     <div class="elements__element">
                         <img class="elements__image" src="images/kirill-pershin-1404681-unsplash.jpg" alt="Картинка к карточке">
                         <div class="elements__info">
                             <h2 class="elements__title">Гора Эльбрус</h2>
-                            <button class="elements__like-button"></button>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </div>
                     <div class="elements__element">
                         <img class="elements__image" src="images/kirill-pershin-1556355-unsplash.jpg" alt="Картинка к карточке">
                         <div class="elements__info">
                             <h2 class="elements__title">Домбай</h2>
-                            <button class="elements__like-button"></button>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </div>
                     <div class="elements__element">
                         <img class="elements__image" src="images/kirill-pershin-1404681-unsplash.jpg" alt="Картинка к карточке">
                         <div class="elements__info">
                             <h2 class="elements__title">Гора Эльбрус</h2>
-                            <button class="elements__like-button"></button>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </div>
                     <div class="elements__element">
                         <img class="elements__image" src="images/kirill-pershin-1556355-unsplash.jpg" alt="Картинка к карточке">
                         <div class="elements__info">
                             <h2 class="elements__title">Домбай</h2>
-                            <button class="elements__like-button"></button>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </div>
                     <div class="elements__element">
                         <img class="elements__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Картинка к карточке">
                         <div class="elements__info">
                             <h2 class="elements__title">Карачаевск</h2>
-                            <button class="elements__like-button"></button>
+                            <button class="elements__like-button" type="button"></button>
                         </div>
                     </div>
                 </section>
@@ -76,14 +76,16 @@
         </div>
     </div>
     <div class="popup">
-        <form class="popup__container" method="get">
-            <h2 class="popup__title">Редактировать профиль</h2>
-            <input class="popup__input" type="text" minlength="2" maxlength="20" placeholder="Имя">
-            <input class="popup__input" type="text" minlength="2" maxlength="40" placeholder="Род деятельности">
-            <button class="popup__save-button" type="submit">Сохранить</button>
+        <div class="popup__container">
             <button class="popup__close-button" type="button"><img class="popup__close-button-pic" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
-        </form>
+            <form method="get">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <input class="popup__input" id="popup__input_line_name" type="text" name="Имя" minlength="2" maxlength="20" placeholder="Имя">
+                <input class="popup__input" id="popup__input_line_occupation" type="text" name="Род деятельности" minlength="2" maxlength="40" placeholder="Род деятельности">
+                <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

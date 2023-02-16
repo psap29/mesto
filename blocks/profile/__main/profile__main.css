@@ -1,5 +1,6 @@
 .profile__main {
     display: flex;
+    width: 38%;
     column-gap: 18px;
     margin-left: 3.4%;
 }
