@@ -9,16 +9,7 @@
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 }
 
-@media screen and (max-width: 450px) {
-    .elements {
-        width: 88%;
-        margin-top: 36px;
-        padding-bottom: 48px;
-        gap: 20px;
-    }
-}
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .elements {
         width: 88%;
         margin-top: 36px;

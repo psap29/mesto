@@ -21,9 +21,9 @@
                             <h1 class="profile__name">Жак-Ив Кусто</h1>
                             <p class="profile__description">Исследователь океана</p>
                         </div>
-                        <button class="profile__edit-button"><img class="profile__edit-button-pic" src="images/edit_button.svg" alt="Кнопка редактирования информации в профиле" type="button"></button>
+                        <button class="profile__edit-button" type="button"><img class="profile__edit-button-pic" src="images/edit_button.svg" alt="Кнопка редактирования информации в профиле"></button>
                     </div>
-                    <button class="profile__add-button"><img class="profile__add-button-pic" src="images/add_button.svg" alt="Кнопка добавления фотографий в профиль" type="button"></button>
+                    <button class="profile__add-button" type="button"><img class="profile__add-button-pic" src="images/add_button.svg" alt="Кнопка добавления фотографий в профиль"></button>
                 </section>
                 <section class="elements">
                     <div class="elements__element">
@@ -78,10 +78,10 @@
     <div class="popup">
         <div class="popup__container">
             <button class="popup__close-button" type="button"><img class="popup__close-button-pic" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
-            <form method="get">
+            <form method="get" name="profile_form">
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <input class="popup__input" id="popup__input_line_name" type="text" name="Имя" minlength="2" maxlength="20" placeholder="Имя">
-                <input class="popup__input" id="popup__input_line_occupation" type="text" name="Род деятельности" minlength="2" maxlength="40" placeholder="Род деятельности">
+                <input class="popup__input" id="popup__input_line_name" type="text" name="name" minlength="2" maxlength="20" placeholder="Имя">
+                <input class="popup__input" id="popup__input_line_occupation" type="text" name="occupation" minlength="2" maxlength="40" placeholder="Род деятельности">
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
         </div>

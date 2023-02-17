@@ -16,7 +16,7 @@
     opacity: 0.5;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .elements__like-button {
         margin-right: 6.7%;
     }

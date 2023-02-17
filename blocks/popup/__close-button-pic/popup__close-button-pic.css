@@ -9,10 +9,3 @@
         height: 20px;
     }
 }
-
-@media screen and (max-width: 320px) {
-    .popup__close-button-pic {
-        width: 20px;
-        height: 20px;
-    }
-}

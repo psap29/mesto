@@ -3,7 +3,7 @@
     height: 10px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .profile__edit-button-pic {
         width: 7.5px;
         height: 7.5px;
