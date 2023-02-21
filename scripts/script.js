@@ -50,6 +50,10 @@ function renderCards(items) {
         cardsElement.querySelector('.elements__image').src = item.link;
         cardsElement.querySelector('.elements__title').textContent = item.name;
         cardsContainer.append(cardsElement);
+        const deleteButton = cardsElement.querySelector('.elements__delete-button');
+        deleteButton.addEventListener('click', handleDeleteButtonClick);
+        const likeButton = cardsElement.querySelector('.elements__like-button');
+        likeButton.addEventListener('click', handleLikeButtonClick); 
     })
 }
 
@@ -60,6 +64,20 @@ function addCard (evt) {
     inputFieldCardLink.value = '';
     cardsPopup.classList.remove('popup_opened');
     renderCards(initialCards);
+}
+
+function handleDeleteButtonClick(event) {
+    console.log(event);
+    const button = event.target;
+    const card = button.closest('.elements__element');
+    card.remove();
+}
+
+function handleLikeButtonClick(event) {
+    console.log(event);
+    const button = event.target;
+    button.classList.toggle('elements__like-button');
+    button.classList.toggle('elements__like-button_active');
 }
 
 function openProfilePopup() {

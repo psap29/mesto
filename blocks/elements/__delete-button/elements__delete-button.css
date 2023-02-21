@@ -8,6 +8,7 @@
     background-color: unset;
     background-image: url(../../../images/delete-icon.svg);
     background-size: 18px 19px;
+    background-repeat: no-repeat;
     cursor: pointer;
     transition: opacity 0.4s ease;
 }
