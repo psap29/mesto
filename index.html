@@ -26,49 +26,17 @@
                     <button class="profile__add-button" type="button"><img class="profile__add-button-pic" src="images/add_button.svg" alt="Кнопка добавления фотографий в профиль"></button>
                 </section>
                 <section class="elements">
-                    <div class="elements__element">
-                        <img class="elements__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Картинка к карточке">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Карачаевск</h2>
-                            <button class="elements__like-button" type="button"></button>
-                        </div>
-                    </div>
-                    <div class="elements__element">
-                        <img class="elements__image" src="images/kirill-pershin-1404681-unsplash.jpg" alt="Картинка к карточке">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Гора Эльбрус</h2>
-                            <button class="elements__like-button" type="button"></button>
-                        </div>
-                    </div>
-                    <div class="elements__element">
-                        <img class="elements__image" src="images/kirill-pershin-1556355-unsplash.jpg" alt="Картинка к карточке">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Домбай</h2>
-                            <button class="elements__like-button" type="button"></button>
-                        </div>
-                    </div>
-                    <div class="elements__element">
-                        <img class="elements__image" src="images/kirill-pershin-1404681-unsplash.jpg" alt="Картинка к карточке">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Гора Эльбрус</h2>
-                            <button class="elements__like-button" type="button"></button>
-                        </div>
-                    </div>
-                    <div class="elements__element">
-                        <img class="elements__image" src="images/kirill-pershin-1556355-unsplash.jpg" alt="Картинка к карточке">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Домбай</h2>
-                            <button class="elements__like-button" type="button"></button>
-                        </div>
-                    </div>
-                    <div class="elements__element">
-                        <img class="elements__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Картинка к карточке">
-                        <div class="elements__info">
-                            <h2 class="elements__title">Карачаевск</h2>
-                            <button class="elements__like-button" type="button"></button>
-                        </div>
-                    </div>
                 </section>
+                <template id="elements-template">
+                    <div class="elements__element">
+                        <button class="elements__delete-button"></button>
+                        <img class="elements__image" src="" alt="Картинка к карточке">
+                        <div class="elements__info">
+                            <h2 class="elements__title"></h2>
+                            <button class="elements__like-button" type="button"></button>
+                        </div>
+                    </div>                   
+                </template>
             </main>
             <footer class="footer">
                 <p class="footer__copyright">© 2020 Mesto Russia</p>
@@ -82,6 +50,17 @@
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <input class="popup__input" id="popup__input_line_name" type="text" name="name" minlength="2" maxlength="20" placeholder="Имя">
                 <input class="popup__input" id="popup__input_line_occupation" type="text" name="occupation" minlength="2" maxlength="40" placeholder="Род деятельности">
+                <button class="popup__save-button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup" id="cards-popup">
+        <div class="popup__container" id="popup_cards_container">
+            <button class="popup__close-button" id="close-button-cards-popup" type="button"><img class="popup__close-button-pic" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
+            <form method="get" name="cards_form">
+                <h2 class="popup__title">Новое место</h2>
+                <input class="popup__input" id="popup__input_line_title" type="text" name="place_title" placeholder="Название">
+                <input class="popup__input" id="popup__input_line_link" type="text" name="link" placeholder="Ссылка на картинку">
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
         </div>
