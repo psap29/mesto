@@ -7,7 +7,7 @@
     <title>Mesto</title>
     <link rel="stylesheet" href="pages/index.css">
 </head>
-<body>
+<div>
     <div class="main-container">
         <div class="page">
             <header class="header">
@@ -43,7 +43,7 @@
             </footer>
         </div>
     </div>
-    <div class="popup">
+    <div class="popup" id="profile-popup">
         <div class="popup__container">
             <button class="popup__close-button" type="button"><img class="popup__close-button-pic" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
             <form method="get" name="profile_form">
@@ -64,6 +64,13 @@
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
         </div>
+    </div>
+    <div class="image-popup">
+            <div class="image-popup__container">
+                <button class="popup__close-button" id="close-button-image-popup" type="button"><img class="popup__close-button-pic" src="images/close_icon.svg" alt="Кнопка закрытия попапа"></button>
+                <img class="image-popup__image" src="" alt="Увеличенная картинка">
+                <h2 class="image-popup__title"></h2>
+            </div>
     </div>
     <script src="./scripts/script.js"></script>
 </body>

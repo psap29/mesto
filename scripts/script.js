@@ -15,6 +15,8 @@ const closeButtonCardsPopup = document.querySelector('#close-button-cards-popup'
 const inputFieldCardTitile = document.querySelector('#popup__input_line_title');
 const inputFieldCardLink = document.querySelector('#popup__input_line_link');
 const cardsFormSent = document.querySelector('#popup_cards_container');
+const imagePopup = document.querySelector('.image-popup');
+const closeButtonImagePopup = document.querySelector('#close-button-image-popup');
 
 const initialCards = [
     {
@@ -47,13 +49,15 @@ function renderCards(items) {
     cardsContainer.innerHTML = '';
     initialCards.forEach(function (item) {
         const cardsElement = cardsTemplate.querySelector('.elements__element').cloneNode(true);
-        cardsElement.querySelector('.elements__image').src = item.link;
+        const imageElement = cardsElement.querySelector('.elements__image');
+        imageElement.src = item.link;
         cardsElement.querySelector('.elements__title').textContent = item.name;
         cardsContainer.append(cardsElement);
         const deleteButton = cardsElement.querySelector('.elements__delete-button');
         deleteButton.addEventListener('click', handleDeleteButtonClick);
         const likeButton = cardsElement.querySelector('.elements__like-button');
-        likeButton.addEventListener('click', handleLikeButtonClick); 
+        likeButton.addEventListener('click', handleLikeButtonClick);
+        imageElement.addEventListener('click', handleOpenImageClick);
     })
 }
 
@@ -66,28 +70,33 @@ function addCard (evt) {
     renderCards(initialCards);
 }
 
-function handleDeleteButtonClick(event) {
-    console.log(event);
-    const button = event.target;
+function handleDeleteButtonClick(evt) {
+    console.log(evt);
+    const button = evt.target;
     const card = button.closest('.elements__element');
+    const deletedCardIndex = Array.from(cardsContainer.children).indexOf(card);
+    initialCards.splice(deletedCardIndex, 1);
     card.remove();
 }
 
-function handleLikeButtonClick(event) {
-    console.log(event);
-    const button = event.target;
+function handleLikeButtonClick(evt) {
+    console.log(evt);
+    const button = evt.target;
     button.classList.toggle('elements__like-button');
     button.classList.toggle('elements__like-button_active');
 }
 
-function openProfilePopup() {
-    popup.classList.add('popup_opened');
-    inputFieldName.value = profileName.textContent;
-    inputFieldOccupation.value = profileDescription.textContent;
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
 }
 
-function closeProfilePopup() {
-    popup.classList.remove('popup_opened'); 
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+}
+
+function fillProfilePopup() {
+    inputFieldName.value = profileName.textContent;
+    inputFieldOccupation.value = profileDescription.textContent;
 }
 
 function sendProfileForm (evt) {
@@ -97,24 +106,31 @@ function sendProfileForm (evt) {
     popup.classList.remove('popup_opened');
 }
 
-function openCardsPopup() {
-    cardsPopup.classList.add('popup_opened');
+function handleOpenImageClick(evt) {
+    const image = evt.target;
+    openPopup(imagePopup);
+    const imageLink = imagePopup.querySelector('.image-popup__image');
+    const imageTitle = imagePopup.querySelector('.image-popup__title');
+    imageLink.src = image.src;
+    imageTitle.textContent = image.closest('.elements__element').querySelector('.elements__title').textContent;
 }
 
-function closeCardsPopup() {
-    cardsPopup.classList.remove('popup_opened');
-}
+addCardsButton.addEventListener('click', () => openPopup(cardsPopup));
 
-editButton.addEventListener('click', openProfilePopup); 
+closeButtonCardsPopup.addEventListener('click', () => closePopup(cardsPopup));
 
-closeButton.addEventListener('click', closeProfilePopup); 
+editButton.addEventListener('click', () => {
+  fillProfilePopup();
+  openPopup(popup);
+})
+
+closeButton.addEventListener('click', () => closePopup(popup));
 
 formSent.addEventListener('submit', sendProfileForm);
 
-addCardsButton.addEventListener('click', openCardsPopup);
-
 cardsFormSent.addEventListener('submit', addCard);
 
-closeButtonCardsPopup.addEventListener('click', closeCardsPopup);
+closeButtonImagePopup.addEventListener('click', () => {
+  closePopup(imagePopup)});
 
 renderCards();
