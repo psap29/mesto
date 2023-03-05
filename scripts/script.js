@@ -71,7 +71,6 @@ function addCard (evt) {
 }
 
 function handleDeleteButtonClick(evt) {
-    console.log(evt);
     const button = evt.target;
     const card = button.closest('.elements__element');
     const deletedCardIndex = Array.from(cardsContainer.children).indexOf(card);
@@ -80,7 +79,6 @@ function handleDeleteButtonClick(evt) {
 }
 
 function handleLikeButtonClick(evt) {
-    console.log(evt);
     const button = evt.target;
     button.classList.toggle('elements__like-button');
     button.classList.toggle('elements__like-button_active');
@@ -94,12 +92,12 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
 
-function fillProfilePopup() {
+function fillProfilePopupData() {
     inputFieldName.value = profileName.textContent;
     inputFieldOccupation.value = profileDescription.textContent;
 }
 
-function sendProfileForm (evt) {
+function sendProfilePopupData (evt) {
     evt.preventDefault();
     profileName.textContent = inputFieldName.value;
     profileDescription.textContent = inputFieldOccupation.value;
@@ -120,13 +118,13 @@ addCardsButton.addEventListener('click', () => openPopup(cardsPopup));
 closeButtonCardsPopup.addEventListener('click', () => closePopup(cardsPopup));
 
 editButton.addEventListener('click', () => {
-  fillProfilePopup();
+  fillProfilePopupData();
   openPopup(popup);
 })
 
 closeButton.addEventListener('click', () => closePopup(popup));
 
-formSent.addEventListener('submit', sendProfileForm);
+formSent.addEventListener('submit', sendProfilePopupData);
 
 cardsFormSent.addEventListener('submit', addCard);
 
