@@ -6,7 +6,7 @@ const profileDescription = document.querySelector('.profile__description');
 const saveButton = document.querySelector('.popup__save-button');
 const inputFieldName = document.querySelector('#popup__input_line_name');
 const inputFieldOccupation = document.querySelector('#popup__input_line_occupation');
-const formSent = document.querySelector('.popup__container');
+const formEditProfile = document.querySelector('.popup__container');
 const cardsTemplate = document.querySelector('#elements-template').content;
 const cardsContainer = document.querySelector('.elements');
 const addCardsButton = document.querySelector('.profile__add-button');
@@ -14,7 +14,7 @@ const cardsPopup = document.querySelector('#cards-popup');
 const closeButtonCardsPopup = document.querySelector('#close-button-cards-popup');
 const inputFieldCardTitile = document.querySelector('#popup__input_line_title');
 const inputFieldCardLink = document.querySelector('#popup__input_line_link');
-const cardsFormSent = document.querySelector('#popup_cards_container');
+const formAddCard = document.querySelector('#popup_cards_container');
 const imagePopup = document.querySelector('.image-popup');
 const closeButtonImagePopup = document.querySelector('#close-button-image-popup');
 const imageLink = imagePopup.querySelector('.image-popup__image');
@@ -132,9 +132,9 @@ editButton.addEventListener('click', () => {
 
 closeButtonProfilePopup.addEventListener('click', () => closePopup(profileEditPopup));
 
-formSent.addEventListener('submit', sendProfileForm);
+formEditProfile.addEventListener('submit', sendProfileForm);
 
-cardsFormSent.addEventListener('submit', addNewCard);
+formAddCard.addEventListener('submit', addNewCard);
 
 closeButtonImagePopup.addEventListener('click', () => {
   closePopup(imagePopup)});
